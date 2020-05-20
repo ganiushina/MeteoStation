@@ -41,6 +41,6 @@ public class MeteoAdapter implements MeteoSensor  {
 //
 //        dateSensor = LocalDateTime.of(sensorTemperature.year(), month, sensorTemperature.day(), hour, sensorTemperature.second());
 //        return dateSensor;
-        return null;
+        return LocalDateTime.of(sensorTemperature.year(), 1, 1, 0, 0, 0).plusDays(sensorTemperature.day()-1).plusSeconds(sensorTemperature.second());
     }
 }
